@@ -1,0 +1,703 @@
+ASD_LMS Dataset - Complete Attribute Description
+Autism Spectrum Disorder: Light, Moderate, and Severe
+Updated Version Based on Original Questionnaire
+
+
+
+Dataset Overview
+This dataset contains behavioral and demographic information for 340 children diagnosed with Autism Spectrum Disorder (ASD), collected from three autism rehabilitation centers in Kirkuk, Iraq. The dataset includes 33 features (8 demographic + 25 behavioral) and 1 target variable representing severity level.
+
+Key Characteristics:
+•	Instances: 340 children
+•	Attributes: 34 (33 features + 1 class label)
+•	Missing Values: None
+•	Class Distribution: Balanced across three severity levels
+•	Data Collection: Manual survey by trained professionals
+•	Language: Bilingual (Arabic/English) questionnaire
+
+
+
+DEMOGRAPHIC ATTRIBUTES (1-8)
+1. Gender (الجنس)
+Type: Categorical (Binary)
+Values: Male (ذكر), Female (أنثى)
+Encoding: Male = 1, Female = 0 (or text)
+Description: Biological sex of the child.
+Clinical Relevance: ASD is more prevalent in males (approximately 4:1 ratio globally). This attribute helps analyze gender-specific patterns in severity and symptoms.
+
+
+
+2. Age (العمر)
+Type: Numerical (Integer)
+Range: 2-16 years
+Mean: 6.6 years
+Description: Age of the child at the time of assessment.
+Clinical Relevance: Age is crucial for understanding developmental trajectories and age-appropriate interventions. Early diagnosis (ages 2-5) is associated with better outcomes.
+
+
+
+3. Family_History (تاريخ العائلة)
+Type: Binary
+Values: Yes (نعم) = 1, No (لا) = 0
+Question (Arabic): هل يوجد في العائلة الأب او الأم مصاب بتوحد
+Question (English): Is there a family member (father or mother) with autism?
+Description: Indicates whether either parent has ASD or ASD-related traits.
+Clinical Relevance: Family history is a significant risk factor. Studies show heritability estimates of 70-90% for ASD, making this a critical demographic variable.
+
+
+
+4. No_OfChild (عدد الأطفال في العائلة)
+Type: Numerical (Integer)
+Range: 1-10
+Description: Total number of children in the family.
+Clinical Relevance: Family size may influence parental attention, resources available for intervention, and sibling interactions that affect social development.
+
+
+
+5. Seq_ofChild (تسلسل الطفل)
+Type: Numerical (Integer)
+Range: 1-10
+Description: Birth order of the child within the family.
+Clinical Relevance: Birth order has been studied in relation to ASD risk, with some research suggesting increased risk in firstborn children or those with older siblings with ASD.
+
+
+
+6. Father_Emp (الأب موظف)
+Type: Binary
+Values: Yes (نعم) = 1, No (لا) = 0
+Description: Employment status of the father.
+Clinical Relevance: Parental employment affects socioeconomic status, access to healthcare, and availability for therapy sessions and interventions.
+
+
+
+7. Mother_Emp (الأم موظف)
+Type: Binary
+Values: Yes (نعم) = 1, No (لا) = 0
+Description: Employment status of the mother.
+Clinical Relevance: Maternal employment influences childcare arrangements, time available for interventions, and family economic resources.
+
+
+
+8. Blood_Relat (صلة القرابة بين زوجين)
+Type: Binary
+Values: Yes (نعم) = 1, No (لا) = 0
+Description: Consanguineous marriage (blood relationship between parents).
+Clinical Relevance: Consanguinity increases the risk of genetic disorders, including ASD. This is particularly relevant in Middle Eastern populations where consanguineous marriages are more common.
+
+
+
+BEHAVIORAL ATTRIBUTES (9-33)
+Domain: Social Interaction
+9. Name_response (الاستجابة للاسم)
+Type: Ordinal (5-level scale)
+Question (Arabic): هل ينظر طفلك اليك عندما تنادي اسمه؟
+Question (English): Does your child look at you when you call his/her name?
+Values:  
+•	0 = Always (دائماً)
+•	1 = Usually (عادةً)
+•	2 = Sometimes (أحياناً)
+•	3 = Rarely (نادراً ما يحدث)
+•	4 = Never (أبداً)
+
+Clinical Significance: Response to name is one of the earliest indicators of ASD. Lack of response by 12 months is a red flag for developmental concerns. This reflects joint attention and social awareness.
+
+DSM-5 Criterion: Social-emotional reciprocity deficits.
+
+
+
+10. Eye_contact (التواصل البصري)
+Type: Ordinal (5-level scale)
+Question (Arabic): ما مدى سهولة التواصل البصري مع طفلك
+Question (English): How easy is it for you to get eye contact with your child?
+Values:  
+•	0 = Very easy (سهل جداً)
+•	1 = Quite easy (سهل بعض شيء)
+•	2 = Quite difficult (صعب بعض شيء)
+•	3 = Very difficult (صعب جداً)
+•	4 = Impossible (مستحيل)
+
+Clinical Significance: Eye contact is a fundamental aspect of social communication. Reduced eye contact is a hallmark feature of ASD and affects social bonding and communication development.
+
+DSM-5 Criterion: Deficits in nonverbal communicative behaviors.
+
+
+
+11. Symbolic_play (اللعب الرمزي)
+Type: Ordinal (5-level scale)
+Question (Arabic): هل يتظاهر طفلك (على سبيل المثال ، رعاية الدمى ، الحديث في هاتف لعبة)؟
+Question (English): Does your child pretend (e.g. care for dolls, talk on a toy phone)?
+Values:  
+•	4 = Many times a day (عدة مرات في اليوم)
+•	3 = A few times a day (مرات قليلة في اليوم)
+•	2 = A few times a week (عدة مرات في الأسبوع)
+•	1 = Less than once a week (أقل من مرة واحدة في الأسبوع)
+•	0 = Never (أبداً)
+
+Clinical Significance: Pretend play requires imagination, theory of mind, and symbolic thinking. Deficits in pretend play are characteristic of ASD and indicate challenges in abstract thinking and social understanding.
+
+DSM-5 Criterion: Restricted, repetitive patterns of behavior (lack of varied, spontaneous play).
+
+
+
+12. Shared_attention (متابعة النظر)
+Type: Ordinal (5-level scale)
+Question (Arabic): هل يتبع طفلك المكان الذي تبحث عنه؟
+Question (English): Does your child follow where you're looking?
+Values:  
+•	0 = Many times a day (عدة مرات في اليوم)
+•	1 = A few times a day (مرات قليلة في اليوم)
+•	2 = A few times a week (عدة مرات في الأسبوع)
+•	3 = Less than once a week (أقل من مرة واحدة في الأسبوع)
+•	4 = Never (أبداً)
+
+Clinical Significance: Following gaze direction is a joint attention skill that emerges around 6-9 months in typical development. Deficits indicate problems with social referencing and shared experiences.
+
+DSM-5 Criterion: Deficits in social-emotional reciprocity.
+
+
+
+13. empathy (التعاطف)
+Type: Ordinal (5-level scale)
+Question (Arabic): إذا كنت أنت أو أي شخص آخر في الأسرة منزعجاً بشكل واضح، فهل تظهر على طفلك علامات الرغبة في تهدئتهم؟ (مثل تمسيد شعرهم، معانقتهم)؟
+Question (English): If you or someone else in the family is visibly upset, does your child show signs of wanting to comfort them? (e.g. stroking their hair, hugging them)?
+Values:  
+•	4 = Always (دائماً)
+•	3 = Usually (عادةً)
+•	2 = Sometimes (أحياناً)
+•	1 = Rarely (نادراً)
+•	0 = Never (أبداً)
+
+Clinical Significance: Empathy and comforting behaviors require theory of mind and emotional understanding. Deficits in empathy are common in ASD and affect social relationships.
+
+DSM-5 Criterion: Deficits in social-emotional reciprocity.
+
+
+
+14. Checks_reactions (فحص ردود الفعل)
+Type: Ordinal (5-level scale)
+Question (Arabic): هل ينظر طفلك بشكل عفوي إلى وجهك للتحقق من رد فعلك عندما تواجه شيئاً غير مألوف؟
+Question (English): Does your child spontaneously look at your face to check your reaction when faced with something unfamiliar?
+Values:  
+•	0 = Always (دائماً)
+•	1 = Usually (عادةً)
+•	2 = Sometimes (أحياناً)
+•	3 = Rarely (نادراً)
+•	4 = Never (أبداً)
+
+Clinical Significance: Social referencing (checking others' reactions) is a key joint attention skill. Children with ASD often fail to use social referencing to guide their behavior in ambiguous situations.
+
+DSM-5 Criterion: Deficits in social-emotional reciprocity.
+
+
+
+Domain: Communication
+15. Speech_clarity (وضوح الكلام)
+Type: Ordinal (6-level scale)
+Question (Arabic): هل يمكن للآخرين فهم كلام طفلك بسهولة؟
+Question (English): Can other people easily understand your child's speech?
+Values:  
+•	0 = Always (دائماً)
+•	1 = Usually (عادةً)
+•	2 = Sometimes (أحياناً)
+•	3 = Rarely (نادراً)
+•	4 = Never (أبداً)
+•	5 = My child does not speak (طفلي لا يتكلم)
+
+Clinical Significance: Speech intelligibility affects functional communication. Many children with ASD have articulation difficulties or atypical prosody that reduces speech clarity.
+
+DSM-5 Criterion: Deficits in developing and maintaining relationships.
+
+
+
+16. Request_pointing (الإشارة للطلب)
+Type: Ordinal (5-level scale)
+Question (Arabic): هل يشير طفلك للإشارة الى شيء يريده (مثل لعبة بعيدة عن المتناول ، يعيدة المتناول)
+Question (English): Does your child point to indicate that s/he wants something (e.g. a toy that is out of reach)?
+Values:  
+•	0 = Many times a day (عدة مرات في اليوم)
+•	1 = A few times a day (مرات قليلة في اليوم)
+•	2 = A few times a week (عدة مرات في الأسبوع)
+•	3 = Less than once a week (أقل من مرة واحدة في الأسبوع)
+•	4 = Never (أبداً)
+
+Clinical Significance: Proto-imperative pointing (pointing to request) typically emerges around 9-12 months. Delayed or absent pointing is an early ASD indicator.
+
+DSM-5 Criterion: Deficits in nonverbal communicative behaviors.
+
+
+
+17. Joint_attention (الإشارة لمشاركة الاهتمام)
+Type: Ordinal (5-level scale)
+Question (Arabic): هل يشير طفلك الى مشاركة الاهتمام معك (مثل الإشارة الى مشهد مثير للاهتمام)؟
+Question (English): Does your child point to share interest with you (e.g. pointing at an interesting sight)?
+Values:  
+•	0 = Many times a day (عدة مرات في اليوم)
+•	1 = A few times a day (مرات قليلة في اليوم)
+•	2 = A few times a week (عدة مرات في الأسبوع)
+•	3 = Less than once a week (أقل من مرة واحدة في الأسبوع)
+•	4 = Never (أبداً)
+
+Clinical Significance: Proto-declarative pointing (pointing to share interest) is a more advanced joint attention skill. Its absence is a strong ASD indicator and reflects deficits in social motivation.
+
+DSM-5 Criterion: Deficits in social-emotional reciprocity.
+
+
+
+18. Hand_prompting (وضع يدك على الأشياء)
+Type: Ordinal (5-level scale)
+Question (Arabic): هل يضع طفلك يدك على شيء ما عندما يريدك أن تستخدمه (على سبيل المثال، على مقبض الباب عندما يريدك أن تفتح الباب، على لعبة عندما يريد منك تشغيلها)؟
+Question (English): Does your child place your hand on an object when s/he wants you to use it (e.g. on a door handle when s/he wants you to open the door, on a toy when s/he wants you to activate it)?
+Values:  
+•	4 = Many times a day (عدة مرات في اليوم)
+•	3 = A few times a day (مرات قليلة في اليوم)
+•	2 = A few times a week (عدة مرات في الأسبوع)
+•	1 = Less than once a week (أقل من مرة واحدة في الأسبوع)
+•	0 = Never (أبداً)
+
+Clinical Significance: Using others' hands as tools is a characteristic ASD behavior. It indicates treating people as objects rather than social partners, reflecting impaired social cognition.
+
+DSM-5 Criterion: Deficits in nonverbal communicative behaviors.
+
+
+
+19. Echoing_voice (صدى الأصوات)
+Type: Ordinal (5-level scale)
+Question (Arabic): هل يردد طفلك صدى الأشياء التي يسمعها (على سبيل المثال ، الأشياء التي تقولها ، أو الخطوط من الأغاني أو الأفلام ، أو الأصوات)؟
+Question (English): Does your child echo things s/he hears (e.g. things that you say, lines from songs or movies, sounds)?
+Values:  
+•	4 = Many times a day (عدة مرات في اليوم)
+•	3 = A few times a day (مرات قليلة في اليوم)
+•	2 = A few times a week (عدة مرات في الأسبوع)
+•	1 = Less than once a week (أقل من مرة واحدة في الأسبوع)
+•	0 = Never (أبداً)
+
+Clinical Significance: Echolalia (immediate or delayed repetition of speech) is common in ASD. While it can serve communicative functions, excessive echolalia indicates language processing difficulties.
+
+DSM-5 Criterion: Stereotyped or repetitive speech.
+
+
+
+20. Gesture_use (استخدام الإيماءات)
+Type: Ordinal (5-level scale)
+Question (Arabic): هل يستخدم طفلك إيماءات بسيطة (مثل التلويح بالوداع)؟
+Question (English): Does your child use simple gestures (e.g. wave goodbye)?
+Values:  
+•	0 = Many times a day (عدة مرات في اليوم)
+•	1 = A few times a day (مرات قليلة في اليوم)
+•	2 = A few times a week (عدة مرات في الأسبوع)
+•	3 = Less than once a week (أقل من مرة واحدة في الأسبوع)
+•	4 = Never (أبداً)
+
+Clinical Significance: Conventional gestures (waving, nodding) are learned social behaviors. Limited gesture use indicates deficits in nonverbal communication and social learning.
+
+DSM-5 Criterion: Deficits in nonverbal communicative behaviors.
+
+
+
+Domain: Repetitive Behaviors
+21. Object_lining (ترتيب الأشياء)
+Type: Ordinal (5-level scale)
+Question (Arabic): عندما يلعب طفلك بمفرده ، هل يصطف الأشياء؟
+Question (English): When your child is playing alone, does s/he line objects up?
+Values:  
+•	4 = Always (دائماً)
+•	3 = Usually (عادةً)
+•	2 = Sometimes (أحياناً)
+•	1 = Rarely (نادراً)
+•	0 = Never (أبداً)
+
+Clinical Significance: Lining up objects is a classic restricted/repetitive behavior in ASD. It reflects a need for order, visual patterns, and non-functional play.
+
+DSM-5 Criterion: Stereotyped or repetitive motor movements, use of objects, or speech.
+
+
+
+22. Restricted_interests (التركيز على الأشياء الدوارة)
+Type: Ordinal (5-level scale)
+Question (Arabic): ما هي المدة التي يمكن خلالها الحفاظ على اهتمام طفلك بجسم دوار (على سبيل المثال ، غسالة ، مروحة كهربائية ، عجلات سيارة لعبة)؟
+Question (English): How long can your child's interest be maintained by a spinning object (e.g. washing machine, electric fan, toy car wheels)?
+Values:  
+•	4 = Several hours (عدة ساعات)
+•	3 = Half an hour (نصف ساعة)
+•	2 = 10 minutes (۱۰ دقائق)
+•	1 = A couple of minutes (دقيقتان)
+•	0 = Less than a minute (أقل من دقيقة)
+
+Clinical Significance: Intense, sustained interest in spinning objects is a restricted interest pattern. It indicates sensory seeking and difficulty shifting attention.
+
+DSM-5 Criterion: Highly restricted, fixated interests that are abnormal in intensity or focus.
+
+
+
+23. walkONtiptoe (المشي على أطراف الأصابع)
+Type: Ordinal (5-level scale)
+Question (Arabic): هل يمشي طفلك على رؤوس أصابعه؟
+Question (English): Does your child walk on tiptoe?
+Values:  
+•	4 = Always (دائماً)
+•	3 = Usually (عادةً)
+•	2 = Sometimes (أحياناً)
+•	1 = Rarely (نادراً)
+•	0 = Never (أبداً)
+
+Clinical Significance: Toe-walking is common in ASD and may relate to sensory processing differences, motor planning issues, or self-stimulatory behavior.
+
+DSM-5 Criterion: Stereotyped or repetitive motor movements.
+
+
+
+24. Repetitive_behaviors (السلوكيات المتكررة)
+Type: Ordinal (5-level scale)
+Question (Arabic): هل يفعل طفلك نفس الشيء مراراً وتكراراً (على سبيل المثال، تشغيل الصنبور وتشغيل مفتاح الإضاءة وإيقافه وفتح وإغلاق الأبواب)؟
+Question (English): Does your child do the same thing over and over again (e.g. running the tap, turning the light switch on and off, opening and closing doors)?
+Values:  
+•	4 = Many times a day (عدة مرات في اليوم)
+•	3 = A few times a day (مرات قليلة في اليوم)
+•	2 = A few times a week (عدة مرات في الأسبوع)
+•	1 = Less than once a week (أقل من مرة واحدة في الأسبوع)
+•	0 = Never (أبداً)
+
+Clinical Significance: Repetitive actions provide predictability and sensory feedback. High frequency indicates strong need for sameness and difficulty with flexible behavior.
+
+DSM-5 Criterion: Stereotyped or repetitive motor movements, use of objects, or speech.
+
+
+
+25. Finger_move (حركات الأصابع)
+Type: Ordinal (5-level scale)
+Question (Arabic): هل يقوم طفلك بحركات أصابع غير عادية بالقرب من عينيه؟
+Question (English): Does your child make unusual finger movements near his/her eyes?
+Values:  
+•	4 = Many times a day (عدة مرات في اليوم)
+•	3 = A few times a day (مرات قليلة في اليوم)
+•	2 = A few times a week (عدة مرات في الأسبوع)
+•	1 = Less than once a week (أقل من مرة واحدة في الأسبوع)
+•	0 = Never (أبداً)
+
+Clinical Significance: Finger flicking near eyes is a self-stimulatory behavior (stimming) that provides visual sensory input. It's a characteristic ASD behavior.
+
+DSM-5 Criterion: Stereotyped or repetitive motor movements.
+
+
+
+26. Repetitive_manipulation (التلاعب المتكرر بالأشياء)
+Type: Ordinal (5-level scale)
+Question (Arabic): هل يعزف طفلك الأشياء بشكل متكرر (مثل قطع الخيط)؟
+Question (English): Does your child twiddle objects repetitively (e.g. pieces of string)?
+Values:  
+•	4 = Many times a day (عدة مرات في اليوم)
+•	3 = A few times a day (مرات قليلة في اليوم)
+•	2 = A few times a week (عدة مرات في الأسبوع)
+•	1 = Less than once a week (أقل من مرة واحدة في الأسبوع)
+•	0 = Never (أبداً)
+
+Clinical Significance: Repetitive manipulation of objects (twiddling, spinning) is a restricted/repetitive behavior that provides sensory feedback and comfort.
+
+DSM-5 Criterion: Stereotyped or repetitive motor movements, use of objects.
+
+
+
+27. Blank_staring (التحديق الفارغ)
+Type: Ordinal (5-level scale)
+Question (Arabic): هل يحدق طفلك في أي شيء دون غرض واضح؟
+Question (English): Does your child stare at nothing with no apparent purpose?
+Values:  
+•	4 = Many times a day (عدة مرات في اليوم)
+•	3 = A few times a day (مرات قليلة في اليوم)
+•	2 = A few times a week (عدة مرات في الأسبوع)
+•	1 = Less than once a week (أقل من مرة واحدة في الأسبوع)
+•	0 = Never (أبداً)
+
+Clinical Significance: Blank staring may indicate absence seizures, sensory processing differences, or internal focus. It's associated with more severe ASD presentations.
+
+DSM-5 Criterion: Unusual sensory interests or responses.
+
+
+
+28. Focused_attention (التركيز على شيء واحد أو اثنين)
+Type: Ordinal (5-level scale)
+Question (Arabic): كم من الوقت يمكن الحفاظ على اهتمام طفلك من خلال كائن واحد أو اثنين فقط؟
+Question (English): How long can your child's interest be maintained by just one or two objects?
+Values:  
+•	4 = Most of the day (معظم اليوم)
+•	3 = Several hours (عدة ساعات)
+•	2 = Half an hour (نصف ساعة)
+•	1 = Ten minutes (عشر دقائق)
+•	0 = A couple of minutes (بضع دقائق)
+
+Clinical Significance: Prolonged focus on limited objects indicates restricted interests and difficulty with flexible attention. It affects play variety and learning.
+
+DSM-5 Criterion: Highly restricted, fixated interests.
+
+
+
+Domain: Sensory Sensitivity
+29. Sensory_seeking (شم أو لعق الأشياء)
+Type: Ordinal (5-level scale)
+Question (Arabic): كم مرة يشم طفلك أو يلعق أشياء غير عادية؟
+Question (English): How often does your child sniff or lick unusual objects?
+Values:  
+•	4 = Many times a day (عدة مرات في اليوم)
+•	3 = A few times a day (مرات قليلة في اليوم)
+•	2 = A few times a week (عدة مرات في الأسبوع)
+•	1 = Less than once a week (أقل من مرة واحدة في الأسبوع)
+•	0 = Never (أبداً)
+
+Clinical Significance: Oral sensory seeking (mouthing, licking, sniffing) indicates atypical sensory processing. It's a way to explore and regulate sensory input.
+
+DSM-5 Criterion: Hyper- or hyporeactivity to sensory input or unusual interest in sensory aspects of the environment.
+
+
+
+30. Noise_sensitivity (الحساسية للضوضاء)
+Type: Ordinal (5-level scale)
+Question (Arabic): هل يبدو طفلك شديد الحساسية للضوضاء؟
+Question (English): Does your child seem oversensitive to noise?
+Values:  
+•	4 = Always (دائماً)
+•	3 = Usually (عادةً)
+•	2 = Sometimes (أحياناً)
+•	1 = Rarely (نادراً)
+•	0 = Never (أبداً)
+
+Clinical Significance: Auditory hypersensitivity is common in ASD. It causes distress, avoidance behaviors, and can interfere with daily functioning and learning.
+
+DSM-5 Criterion: Hyper- or hyporeactivity to sensory input.
+
+
+
+Domain: Language Development
+31. Vocabulary_size (حجم المفردات)
+Type: Ordinal (5-level scale)
+Question (Arabic): كم عدد الكلمات التي يمكن أن يقولها طفلك؟
+Question (English): How many words can your child say?
+Values:  
+•	0 = Over 100 words (أكثر من ۱۰۰ كلمة)
+•	1 = 51–100 words (۱۰۰..۵۱ كلمة)
+•	2 = 10–50 words (۱۰..۰۵ كلمة)
+•	3 = Less than 10 words (أقل من ۱۰ كلمات)
+•	4 = None—s/he has not started speaking yet (لا شيء - لم يبدأ التحدث بعد)
+
+Clinical Significance: Vocabulary size is a key language milestone. Delayed vocabulary development is common in ASD and affects functional communication and academic outcomes.
+
+DSM-5 Criterion: Language delays are not required for ASD diagnosis but are common co-occurring features.
+
+
+
+32. First_words (الكلمات الأولى)
+Type: Ordinal (5-level scale)
+Question (Arabic): هل تصف الكلمات الأولى لطفلك على النحو التالي:
+Question (English): Would you describe your child's first words as:
+Values:  
+•	4 = Very typical (نموذجي للغاية)
+•	3 = Quite typical (نموذجي تماماً)
+•	2 = Slightly unusual (غير عادي نوعاً ما)
+•	1 = Very unusual (غير معتاد جداً)
+•	0 = My child doesn't speak (طفلي لا يتكلم)
+
+Clinical Significance: Unusual first words (e.g., echolalia, idiosyncratic phrases) indicate atypical language development patterns characteristic of ASD.
+
+DSM-5 Criterion: Deficits in developing, understanding, and using communication.
+
+
+
+33. Adaptability_Flexibility (التكيف مع التغيير)
+Type: Ordinal (5-level scale)
+Question (Arabic): ما مدى سهولة التكيف مع طفلك عندما تكون روتينه أو عندما تكون الأمور في غير مكانها المعتادة؟
+Question (English): How easy is it for your child to adapt when his/her routine changes or when things are out of their usual place?
+Values:  
+•	4 = Very easy (سهل جداً)
+•	3 = Quite easy (سهل بعض شيء)
+•	2 = Quite difficult (صعب بعض شيء)
+•	1 = Very difficult (صعب جداً)
+•	0 = Impossible (مستحيل)
+
+Clinical Significance: Insistence on sameness and difficulty with transitions are core ASD features. Inflexibility affects daily functioning, learning, and family life.
+
+DSM-5 Criterion: Insistence on sameness, inflexible adherence to routines, or ritualized patterns.
+
+
+
+TARGET VARIABLE
+34. Class (درجة الحالة)
+Type: Categorical (Ordinal)
+Values:  
+•	0 = Light/Mild (الخفيف) - Level 1
+•	1 = Moderate (المتوسط) - Level 2
+•	2 = Severe (الشديد) - Level 3
+
+Distribution:
+•	Light: 104 instances (30.6%)
+•	Moderate: 119 instances (35.0%)
+•	Severe: 117 instances (34.4%)
+
+Description: ASD severity level as assessed by trained professionals based on DSM-5 criteria and clinical observation.
+
+DSM-5 Severity Levels:
+
+Level 1 (Light/Mild): "Requiring support"
+•	Noticeable difficulties in social communication
+•	Inflexibility causes significant interference
+•	Difficulty switching between activities
+•	Problems with organization and planning affect independence
+
+Level 2 (Moderate): "Requiring substantial support"
+•	Marked deficits in verbal and nonverbal social communication
+•	Social impairments apparent even with supports
+•	Difficulty coping with change
+•	Restricted/repetitive behaviors interfere with functioning
+
+Level 3 (Severe): "Requiring very substantial support"
+•	Severe deficits in verbal and nonverbal social communication
+•	Very limited initiation of social interactions
+•	Minimal response to social overtures
+•	Extreme difficulty coping with change
+•	Restricted/repetitive behaviors markedly interfere with functioning
+
+
+
+DATA COLLECTION METHODOLOGY
+Collection Period: [To be added]
+
+Data Sources:
+•	Three autism rehabilitation and training centers in Kirkuk, Iraq
+•	All centers are licensed and specialized in ASD diagnosis and intervention
+
+Assessment Procedure:
+1	Parents/guardians completed bilingual questionnaire (Arabic/English)
+2	Trained professionals supervised data collection
+3	Clinical assessments conducted by specialists
+4	Severity classification based on DSM-5 criteria and professional judgment
+
+Quality Assurance:
+•	Double-entry verification
+•	Consistency checks
+•	No missing values
+•	Professional supervision throughout
+
+Ethical Considerations:
+•	Informed consent from all parents/guardians
+•	Institutional ethics approval obtained
+•	Data de-identified to protect privacy
+•	Confidentiality maintained
+
+
+
+DOMAIN CLASSIFICATION SUMMARY
+Domain	Attributes	Count
+Social Interaction	Name_response, Eye_contact, Symbolic_play, Shared_attention, empathy, Checks_reactions	6
+Communication	Speech_clarity, Request_pointing, Joint_attention, Hand_prompting, Echoing_voice, Gesture_use	6
+Repetitive Behaviors	Object_lining, Restricted_interests, walkONtiptoe, Repetitive_behaviors, Finger_move, Repetitive_manipulation, Blank_staring, Focused_attention	8
+Sensory Sensitivity	Sensory_seeking, Noise_sensitivity	2
+Language Development	Vocabulary_size, First_words, Adaptability_Flexibility	3
+Demographics	Gender, Age, Family_History, No_OfChild, Seq_ofChild, Father_Emp, Mother_Emp, Blood_Relat	8
+Total		33
+
+
+ENCODING SUMMARY
+Binary Attributes (8):
+•	Family_History, Father_Emp, Mother_Emp, Blood_Relat (demographic)
+•	Values: Yes (1), No (0)
+
+Ordinal 5-Level Attributes (19):
+•	Most behavioral questions
+•	Values: 0-4 (frequency or difficulty scales)
+
+Ordinal 6-Level Attributes (1):
+•	Speech_clarity
+•	Values: 0-5 (includes "does not speak" option)
+
+Numerical Attributes (2):
+•	Age (2-16 years)
+•	No_OfChild (1-10)
+
+Categorical Attributes (2):
+•	Gender (Male/Female)
+•	Class (0=Light, 1=Moderate, 2=Severe)
+
+
+
+DATA STATISTICS
+Dataset Completeness:
+•	Total instances: 340
+•	Complete cases: 340 (100%)
+•	Missing values: 0 (0%)
+
+Class Balance:
+•	Light: 104 (30.6%)
+•	Moderate: 119 (35.0%)
+•	Severe: 117 (34.4%)
+•	Balance ratio: 1.00 : 1.14 : 1.13 (excellent balance)
+
+Gender Distribution:
+•	Male: 202 (59.4%)
+•	Female: 138 (40.6%)
+•	Male-to-female ratio: 1.46:1
+
+Age Statistics:
+•	Minimum: 2 years
+•	Maximum: 16 years
+•	Mean: 6.6 years
+•	Median: 6 years
+
+
+
+CLINICAL RELEVANCE
+This dataset is valuable for:
+
+1	Severity Classification Research: Developing automated tools to classify ASD severity levels
+2	Feature Selection Studies: Identifying the most discriminative behavioral markers
+3	Cross-Cultural Validation: Comparing ASD presentations in Middle Eastern populations
+4	Screening Tool Development: Creating brief, efficient screening instruments
+5	Intervention Planning: Understanding which behaviors correlate with severity for targeted interventions
+6	Machine Learning Applications: Training and testing classification algorithms
+7	Epidemiological Research: Understanding ASD patterns in underrepresented populations
+
+
+
+POTENTIAL APPLICATIONS
+8	Clinical Decision Support Systems: Assist professionals in severity assessment
+9	Automated Screening Tools: Develop parent-report screening applications
+10	Intervention Prioritization: Identify behaviors most associated with severity for treatment planning
+11	Resource Allocation: Help centers allocate resources based on severity predictions
+12	Early Detection: Develop models for early identification of children at risk for more severe ASD
+13	Comparative Studies: Compare with Western datasets to identify universal vs. culture-specific patterns
+
+
+
+LIMITATIONS
+14	Geographic Specificity: Data from one region (Kirkuk, Iraq) may not generalize globally
+15	Cross-Sectional Design: No longitudinal data to track severity changes over time
+16	Parent-Report Bias: Relies on parent observations, which may be subjective
+17	Age Range: Limited to children aged 2-16; not applicable to adults
+18	Diagnostic Confirmation: Assumes accurate initial ASD diagnosis
+19	Cultural Factors: Some behaviors may be interpreted differently across cultures
+
+
+
+RECOMMENDED CITATION
+[To be added after publication]
+
+
+
+CONTACT INFORMATION
+Data Contributors: [To be added]
+Institution: [To be added]
+Email: arazo8484@gmail.com
+Website: [To be added]
+
+
+
+VERSION HISTORY
+Version 1.0 - Initial release
+Date: 16/2/2026
+
+
+
+
+ACKNOWLEDGMENTS
+We thank the three autism rehabilitation centers in Kirkuk, Iraq, for their collaboration, and all the families who participated in this study. Special thanks to the trained professionals who supervised data collection and ensured data quality.
+
+
+
+End of Dataset Description
