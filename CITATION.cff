@@ -11,11 +11,11 @@ url: "https://github.com/YOUR_USERNAME/ASD-Severity-Classification"
 preferred-citation:
   type: article
   authors:
-    - family-names: "[Your Last Name]"
-      given-names: "[Your First Name]"
+    - family-names: "[Mustafa]"
+      given-names: "[Arazo M.]"
   title: "Behavioral Analysis and Severity Classification of Children with Autism Spectrum Disorder"
-  journal: "[Journal Name]"
-  year: 2025
+  journal: "[ARID]"
+  year: 2026
   volume: XX
   issue: XX
   start: XX
